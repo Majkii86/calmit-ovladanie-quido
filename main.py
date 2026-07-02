@@ -24,7 +24,7 @@ app.add_middleware(
 gate_service = GateService()
 
 
-@app.get("/")
+@app.get("/api")
 def root():
     return {
         "message": "Backend beží",
