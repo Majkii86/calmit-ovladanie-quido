@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.topInfo {
+  margin-bottom: 20px;
+}
+
+.tempCard {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  max-width: 260px;
+}
+
+.tempTitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.tempValue {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.gateCard h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.statusBox {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.statusTitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.statusValue {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.statusMeta {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.buttons button,
+.actions button {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.openBtn {
+  background: #16a34a;
+  color: white;
+}
+
+.closeBtn {
+  background: #dc2626;
+  color: white;
+}
+
+.globalActions {
+  margin-top: 20px;
+}
+
+.globalActions button {
+  width: 100%;
+  background: #2563eb;
+  color: white;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.message {
+  margin-top: 16px;
+  background: #eef2ff;
+  color: #1e3a8a;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+}
