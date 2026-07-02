@@ -1,6 +1,12 @@
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 
+
+
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+import os
+
 from config import MODE
 from services.gate_service import GateService
 from security.auth import require_api_key
@@ -85,3 +91,17 @@ def fault_gate():
 @app.post("/api/offline", dependencies=[Depends(require_api_key)])
 def offline_gate():
     return gate_service.offline_gate()
+
+
+frontend_build_path = os.path.join(os.path.dirname(__file__), "frontend", "build")
+
+app.mount(
+    "/static",
+    StaticFiles(directory=os.path.join(frontend_build_path, "static")),
+    name="static",
+)
+
+@app.get("/{full_path:path}")
+def serve_react(full_path: str):
+    index_file = os.path.join(frontend_build_path, "index.html")
+    return FileResponse(index_file)
